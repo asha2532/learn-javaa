@@ -9,29 +9,49 @@
 
 <body>
   <pre>
-    class main3
+    interface Flyable
 {
-public static void main(String st[])
+    void fly_obj();
+ }
+class Spacecraft implements Flyable
 {
-printMiddle("Manjit");
-}
+   public void fly_obj()
+     {
+         System.out.println("Spacecrfat");
+     }
+   }
+class  Airplane implements Flyable
+{
+   public void fly_obj()
+     {
+         System.out.println(" Airplane");
+     }
+   }
 
-public static void printMiddle(String str)
+class Helicopter  implements Flyable
 {
- int middleIndex=str.length()/2;
-if(str.length()%2==0)
+   public void fly_obj()
+     {
+         System.out.println("Helicopter ");
+     }
+   }
+class main
 {
-System.out.println("String has even length,middle characters are:"+ str.charAt(middleIndex-1)+" and "+ str.charAt(middleIndex) );
-}else
-{
-System.out.println("Middle character is:"+ str.charAt(middleIndex));
-}
-
-}
+ public static void main(String st[])
+   {
+      Flyable obj=new Spacecraft();
+      Flyable obj1=new Airplane();
+      Flyable obj2=new Helicopter ();
+                    obj.fly_obj();
+                    obj1.fly_obj();
+                    obj2.fly_obj();
+  }
 }
 
 OUTPUT:
-String has even length,middle character are:n and j
+Spacecrfat
+Airplane
+Helicopter
   </pre>
 </body>
 

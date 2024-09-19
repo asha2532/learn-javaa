@@ -9,26 +9,33 @@
 
 <body>
   <pre>
-    class Average
-{
-    void CalculateAverage(double a,double b,double c)
-      {
-           double sum=a+b+c;
-           double average=sum/3;
-        System.out.println("average of three number:"+average);
-       }
-}
-class main
-{
-   public static void main(String st[])
-     {
-             Average obj=new Average();
-            obj.CalculateAverage(23.1,1.34,2.1);
-      }
-}
+    
+    interface animal
+    {
+        void bark();
+        void speak();
+    }
 
-OUTPUT:
-average of three number:8.84666666668
+    class dog implements animal
+    {
+        public void bark(){}
+        public void speak()
+        {
+            System.out.println("dog is barking");
+        }
+    }
+
+    class main
+    {
+public static voif=d main(String st[])
+  {
+    animal obj=new dog();
+    obj.speak();
+  }
+    }
+
+    OUTPUT:
+    dog is barking
   </pre>
 </body>
 

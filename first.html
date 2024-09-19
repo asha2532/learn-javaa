@@ -9,46 +9,65 @@
 
 <body>
   <pre>
-    class main1
+    interface shape
     {
-    public static void main(String st[])
+      void getArea();
+    }
+
+    class rectangle implements shape
     {
-    smallestNumber();
-    
+      int l=12;
+      int b=23;
+      int area;
+      public void getArea()
+      {
+        area=l*b;
+        System.out.println("area of rectangle is:"+ area);
+        
+      }
     }
-    
-     public static void smallestNumber()
+
+    class circle implements shape
     {
-    int num1=12;
-    int num2=2;
-    int num3=18;
-    if(num1&ltnum2)
+      float pi=3.14f;
+      float r=22.5f;
+      float area1;
+      public void getArea()
+      {
+        area1=pi*(r*r);
+        System.out.println("area of circle is:"+ area1);
+      }
+    }
+
+    class triangle implements shape
     {
-    if(num1&ltnum3)
+      int b=12;
+      int h=45;
+      int area3;
+      public void getArea()
+      {
+        area3=(b*h)/2;
+        System.out.println("area of triangle is:"+ area3);
+      }
+    }
+
+    class main 
     {
-    System.out.println(num1+ "is the the smallest number  ");
+      public static void main(String st[])
+      {
+        shape obj=new rectangle();
+        obj.getArea();
+        shape obj2=new circle();
+        obj2.getArea();
+        shape obj3=new triangle();
+        obj3.getArea();
+      }
     }
-    else{
-    System.out.println(num3+ "is the smallest number  ");
-    }
-    }
-    else
-    {
-    if(num2&ltnum3)
-    {
-    
-    System.out.println(num2+ "is the the smallest number  ");
-    
-    }else{
-    
-    System.out.println(num3+ "is the the smallest number  ");
-    }
-    }
-    }
-    }
-    
+
     OUTPUT:
-    2is the smallest number
+      area of rectangle:276
+      area of circle:1589.625
+      area of triangle:270
   </pre>
 </body>
 

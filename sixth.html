@@ -9,47 +9,51 @@
 
 <body>
   <pre>
-    class Print
+    interface Drawable
     {
-       void PrintChar( char startC,char endC)
+       void draw();
+    }
+    
+    class circle implements Drawable
+    {
+       public void draw()
+        {
+         System.out.println("circle is drawing");
+        }
+    }
+    class rectangle implements Drawable
+    {
+       public void draw()
+        {
+         System.out.println("rectangle is drawing");
+        }
+    }
+    
+    class triangle implements Drawable
+    {
+       public void draw()
+        {
+         System.out.println("triangle is drawing");
+        }
+    }
+     class main
        {
-           if(startC &gt endC)
-            {
-               System.out.println("invalid range");
-            }
-       for(char a=startC ; a&lt=endC ;  a++)
-        {
-            System.out.println("all character: "+a);
-         }
+          public static void main(String st[])
+           {
+              Drawable obj=new circle();
+                         obj.draw();
+              Drawable obj2=new rectangle();
+                         obj2.draw();
+             Drawable obj3=new triangle();
+                         obj3.draw();
+          }
     }
-    }
-    class main
-    {
-      public static void main(String st[])
-        {
-              Print obj=new Print();
-                     obj.PrintChar('A','P');
-       }
-    }
-     
+    
+ 
     OUTPUT:
-    all character:A
-    all character:B
-    all character:C 
-    all character:D 
-    all character:E 
-    all character:F 
-    all character:G 
-    all character:H 
-    all character:I 
-    all character:J 
-    all character:K 
-    all character:L 
-    all character:M 
-    all character:N 
-    all character:O 
-    all character:P 
-       
+    circle is drawing
+    rectangle is drawing
+    triangle is drawing
   </pre>
 </body>
 
