@@ -9,16 +9,24 @@
 
 <body>
   <pre>
-    class main1
+    class main41
     {
     public static void main(String st[])
     {
-    System.out.println("HELLO WORLD..");
+    int marks[]={85,90,43,100,67};
+    int sum=0;
+    for(int mark:marks)
+    {
+    sum=sum+mark;
+    }
+    
+    double average=(double)sum/marks.length;
+    System.out.println("Average marks:" + average);
     }
     }
 
     OUTPUT:
-    HELLO WORLD..
+    Average marks:77.0
   </pre>
 </body>
 

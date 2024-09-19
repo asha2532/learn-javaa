@@ -9,16 +9,22 @@
 
 <body>
   <pre>
-    class main1
+    class main30
     {
     public static void main(String st[])
     {
-    System.out.println("HELLO WORLD..");
+    double s=5;
+    double area=calculateArea(s);
+    System.out.println("area  of equilateral:" + area);
+    }
+    public static double calculateArea(double s)
+    {
+    return(Math.sqrt(3)/4*s*s);
     }
     }
 
     OUTPUT:
-    HELLO WORLD..
+    area  of equilateral:10.825317547305481
   </pre>
 </body>
 

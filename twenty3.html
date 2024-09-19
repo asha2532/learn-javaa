@@ -9,16 +9,24 @@
 
 <body>
   <pre>
-    class main1
+    import java.util.Scanner;
+
+    class main23
     {
     public static void main(String st[])
     {
-    System.out.println("HELLO WORLD..");
+    Scanner obj= new Scanner(System.in);
+    System.out.println("Enter a number:");
+    int x=obj.nextInt();
+    double sqrt=Math.sqrt(x);
+    System.out.println("square root is:" + sqrt);
     }
     }
 
     OUTPUT:
-    HELLO WORLD..
+    Enter a number:
+    25
+    square root is:5.0
   </pre>
 </body>
 
