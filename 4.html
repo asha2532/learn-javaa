@@ -9,82 +9,21 @@
 
 <body>
   <pre>
-    package employee;
+    import java.util.Scanner;
 
+    class main4
+    {
+    public static void main(String st[]) throws java.io.IOException
+    {
+    java.util.Scanner obj= new java.util.Scanner(System.in);
+    float br=obj.nextFloat();
+    System.out.println("entered value is:" + br);
+    }
+    }
 
-    class Employee
-    
-     {
-    private double salary;
-    
-    public Employee(double salary)
-    
-      {
-      this.salary=salary;
-      }
-    
-      void work()
-    
-      {
-      System.out.println("Employee is working");
-      }
-    
-      double getSalary()
-    
-      {
-      return salary;
-      }
-      }
-    
-    
-    class HRManager extends Employee
-    
-      {
-    
-      public HRManager(double salary)
-    
-      {
-    
-      super(salary);
-      }
-    
-      void work()
-    
-      {
-      System.out.println("HRManager is managing employee");
-      }
-    
-      void addEmployee()
-    
-      {
-      System.out.println("HR Manager adding Employee");
-      }
-    
-      }
-    
-    class Main
-    
-      {
-      public static void main(String st[])
-    
-      {
-      Employee emp=new Employee(5000);
-    
-      emp.work();
-    
-      System.out.println("Salary : "+emp.getSalary());
-    
-      HRManager hrm=new HRManager(10000);
-    
-      hrm.work();
-    
-      System.out.println("Salary : "+hrm.getSalary());
-    
-      hrm.addEmployee();
-    
-      }
-      }
-    
+    OUTPUT:
+    12.22
+    entered value is:12.22
   </pre>
 </body>
 

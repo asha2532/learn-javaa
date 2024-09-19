@@ -9,30 +9,37 @@
 
 <body>
   <pre>
-    class Animal
+    import java.util.Scanner;
+
+    class Main
     {
-         void move()
+        public static void main(String st[])
           {
-            System.out.println("Snake is moving");
-           }
-    }
-    class Cheetah extends Animal
-    {
-        void move()
-         {
-            System.out.println("Cheetah is running");
+                    boolean  x;
+              Scanner str=new Scanner(System.in);
+             System.out.println("Enter value:");
+    
+             try
+                   { 
+                               x=str.nextBoolean();
+                         System.out.println("Entered value:"+x);
+                   }
+            catch(java.util.InputMismatchException t)
+                {
+                      System.out.println("\nPlease enter  valid value");
+                     System.out.println(t.getClass());
+                 }
+            catch(Throwable t)
+                {
+                     System.out.println(t.getMessage());
+                 }
           }
     }
-    class main
-    {
-      public static void main(String st[])
-        {
-           Cheetah obj=new Cheetah();
-                  obj.move();
-          }
-    }
+
     OUTPUT:
-    Cheetah is running
+    Enter value:
+    true
+    Entered value:true
   </pre>
 </body>
 

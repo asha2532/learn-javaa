@@ -9,53 +9,23 @@
 
 <body>
   <pre>
-    package animal2;
+    import java.util.Scanner;
 
-    class Animal
-    
+    class main5
     {
-    
-      void move()
-    
-      {
-      System.out.println("Move");
-    
-      }
-    
-      }
-    
-    class Cheetah extends Animal
-    
-      {
-      void move()
-    
-      {
-      System.out.println("Cheetah Run");
-    
-      }
-      
+    public static void main(String st[]) throws java.io.IOException
+    {
+    java.util.Scanner obj= new java.util.Scanner(System.in);
+    System.out.println("enter the value :");
+    double br=obj.nextDouble();
+    System.out.println("entered value is:" + br);
     }
-    
-    
-    class Main
-    
-      {
-    
-      public static void main(String st[])
-    
-      {
-      Animal a=new Animal();
-    
-      a.move();
-    
-      Cheetah c = new Cheetah();
-    
-      c.move();
-    
-      }
-    
-      }
-    
+    }
+
+    OUTPUT:
+    enter the value :
+    3.14
+    entered value is:3.14
   </pre>
 </body>
 

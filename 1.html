@@ -9,31 +9,25 @@
 
 <body>
   <pre>
-    class Animal
+    import java.util.Scanner;
+
+    class main1
     {
-      void makeSound()
-      {
-      System.out.println("Lion is roaring");
+    public static void main(String st[]) throws java.io.IOException
+    {
+    java.io.InputStreamReader obj= new java.io.InputStreamReader(System.in);
+    java.util.Scanner isr=new java.util.Scanner(obj);
+    System.out.println("enter the character:");
+     int str=obj.read();
+    System.out.println("entered character is:" + str);
     }
-    }
-     class Cat extends Animal
-    {
-         void makeSound()
-           {
-              System.out.println("cats don't bark");
-            }
-     }
-    class main
-    {
-     public static void main(String st[])
-      {
-              Cat obj1=new Cat();                
-           obj1.makeSound();
-      }
     }
 
     OUTPUT:
-    cats don't bark
+
+    enter the character:
+    a
+    entered character is:97
   </pre>
 </body>
 
