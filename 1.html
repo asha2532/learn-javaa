@@ -9,25 +9,44 @@
 
 <body>
   <pre>
-    import java.util.Scanner;
-
-    class main1
+    class Person 
     {
-    public static void main(String st[]) throws java.io.IOException
-    {
-    java.io.InputStreamReader obj= new java.io.InputStreamReader(System.in);
-    java.util.Scanner isr=new java.util.Scanner(obj);
-    System.out.println("enter the character:");
-     int str=obj.read();
-    System.out.println("entered character is:" + str);
-    }
+    
+    
+         String name;
+     
+        int age;
+    
+     
+        Person(String name, int age)
+        {
+     
+           this.name=name;
+            this.age=age ; 
+       }
+    
+        
+         
+    
+        public static void main(String st[])
+        {
+     
+    
+            Person P1 = new Person("shanaya", 30);
+    
+            Person P2 = new Person("anaya", 25);
+    
+    
+            System.out.println("P1: Name=" + P1.name + " ,age:" + P1.age);
+    
+            System.out.println("P2: Name=" + P2.name + " ,age:" + P2.age);
+        }
+    
     }
 
     OUTPUT:
-
-    enter the character:
-    a
-    entered character is:97
+    P1: Name=shanaya ,age=30
+    P2: Name=anaya ,age=25
   </pre>
 </body>
 

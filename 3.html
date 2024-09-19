@@ -9,21 +9,65 @@
 
 <body>
   <pre>
-    import java.util.Scanner;
-
-    class main3
+    class Rectangle
     {
-    public static void main(String st[]) throws java.io.IOException
-    {
-    java.util.Scanner obj= new java.util.Scanner(System.in);
-    int br=obj.nextInt();
-    System.out.println("entered integer is:" + br);
-    }
-    }
-
-    OUTPUT:
-    49
-    entered integer is:49
+     
+        double width;
+  
+       double height;
+  
+  
+  
+       Rectangle(double width, double height)
+      {
+   
+         this.width = width;
+   
+         this.height = height;
+  
+      }
+  
+   
+       double calculateArea()
+       {
+   
+         return width * height;
+  
+        }
+  
+   
+  
+       double calculatePerimeter()
+      {
+    
+        return 2 * (width + height);
+   
+      }
+  
+  
+       public static void main(String st[])
+      {
+   
+  
+          Rectangle rectangle = new Rectangle(5.0, 3.0);
+  
+   
+         System.out.println("Rectangle dimensions: width = " + rectangle.width + ", height = " + rectangle.height);
+  
+          System.out.println("Area: " + rectangle.calculateArea());
+  
+          System.out.println("Perimeter: " + rectangle.calculatePerimeter());
+  
+      }
+  
+  }
+  
+  OUTPUT:
+  Rectangle dimensions: width = 5.0  height = 3.0
+  Area: 15.0
+  Perimeter: 16.0
+  
+  
   </pre>
 </body>
 

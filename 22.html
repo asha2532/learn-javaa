@@ -9,52 +9,36 @@
 
 <body>
   <pre>
-    abstract class Person
+    class copy
     {
-        abstract void eat();
-        abstract void exercise();
-   }
-  class Athlete extends Person
-   {
-      void eat() 
-        {
-          System.out.println("Athlete eats food with high protein and carbohydrates.");
-        }
-      void exercise() 
-        {
-          System.out.println("Athlete follows a training routine with strength and cardio exercises.\n");
-      }
-  }
-  class LazyPerson extends Person 
-  {
-      void eat() 
-        {
-            System.out.println("Lazy person prefers fast food and snacks.");
-        }
-      void exercise()
-        {
-            System.out.println("Lazy person avoids physical activity and prefers to jus lay on his bed.");
-      }
-  }
-  class main
-   {
-      public static void main(String[] st) 
-        {
-             Person obj = new Athlete();
-             Person obj1 = new LazyPerson();
-                           obj.eat();
-                           obj.exercise();
-                          obj1.eat();
-                          obj1.exercise();
-      }
-  }
+    int x;
+    copy(int y)
+    {
+    x=y;
+    }
+    copy(copy t)
+    {
+    x=t.x;
+    }
+    void display()
+    {
+    System.out.println(x);
+    }
+    public static void main(String st[])
+    {
+    copy obj= new copy(10);
+    obj.display();
+    obj.x++;
+    copy obj1=new copy(obj);
+    obj1.display();
+    }
+    
+    
+    }
 
-  
-  OUTPUT:
-  Athlete eats food with high protein and carbohydrates.
-  Athlete follows a training routine with strength and cardio exercises.
-  Lazy person prefers fast food and snacks.
-  Lazy person avoids physical activity and prefers to jus lay on his bed.
+    OUTPUT:
+    10
+    11
   </pre>
 </body>
 

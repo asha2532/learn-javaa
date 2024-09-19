@@ -9,69 +9,81 @@
 
 <body>
   <pre>
-    abstract class GeometricShape
-    {
-        abstract double area() ;
-       abstract double perimeter();
-    }
-    class Triangle extends GeometricShape
-    {
-         double area() 
-          {
-               double height=9.8;
-             double base=9.7;
-             double area=(height*base)/2;
-           System.out.println("\nArea of triangle:"+area);
-    return area;
-        }
-      double  perimeter()
-        {
-               double a=6.1;
-               double b=4.6;
-               double c=3.9;
-               double perimeter=a+b+c;
-           System.out.println("Perimeter of triangle:"+perimeter);
-    return perimeter;
-       }
-    }
-    class Square extends GeometricShape
-    {
-          double area() 
-          {
-               double side=13;
-               double area1=side*side;
-               System.out.println("\nArea of square:"+area1);
-    return area1;
-           }
-         double  perimeter()
-           {
-                double side=19;
-                double perimeter1=4*side;
-            System.out.println("perimeter of square:"+perimeter1);
-    return perimeter1;
-          }
-    }
-    class main
-    {
-      public static void main(String st[])
-        {
-            GeometricShape obj=new Triangle();
-                                      obj.area();
-                                     obj.perimeter();
-           GeometricShape obj1=new Square();
-                                      obj1.area();
-                                     obj1.perimeter();
+    class Person1 {
+        private String name;
+        private int age;
+        private String country;
     
-      }
+        Person1(String name, int age, String country) {
+            this.name = name;
+            this.age = age;
+            this.country = country;
+        }
+    
+        // Getter for name
+        public String getName() {
+            return name;
+        }
+    
+       void setName(String name) {
+            this.name = name;
+        }
+    
+        int getAge() {
+            return age;
+        }
+    
+         void setAge(int age) {
+            if (age &gt= 0) {
+                this.age = age;
+            } else {
+                System.out.println("Age cannot be negative.");
+            }
+        }
+    
+       String getCountry() {
+            return country;
+        }
+    
+         void setCountry(String country) {
+            this.country = country;
+        }
+    
+         void displayPersonInfo() {
+            System.out.println("Name: " + name);
+            System.out.println("Age: " + age);
+            System.out.println("Country: " + country);
+        }
+    
+        public static void main(String[] args) {
+           
+            Person1 person = new Person1("Anaya", 12, "bangladesh");
+    
+           
+            person.displayPersonInfo();
+    
+           
+            person.setName("shanaya");
+            person.setAge(13);
+            person.setCountry("india");
+            System.out.println("\nUpdated Person Information:");
+            person.displayPersonInfo();
+    
+            
+            person.setAge(-5);
+        }
     }
-
     
     OUTPUT:
-    Area of triangle:47.53
-    Perimeter of triangle:14.6
+    Name: Anaya
+    Age: 12
+    Country: bangladesh
 
-    Area of square:169.0
-    perimeter of square:76.0
+    Updated Person Information:
+    Name: Shanaya
+    Age: 13
+    Country: india
+    Age cannot be negative.
   </pre>
 </body>
 

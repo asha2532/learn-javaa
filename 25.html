@@ -9,56 +9,28 @@
 
 <body>
   <pre>
-    abstract class Bird 
-    {
-          abstract void fly();
-          abstract void makeSound();
-    }
-    class Eagle extends Bird 
-    {
-      void fly()
-        {
-            System.out.println("\nEagle soars high in the sky with powerful wing strokes.");
-         }
-       void makeSound()
-          {
-            System.out.println("Eagle makes a high-pitched, whistling sound.\n");
-        }
-    }
-    class Hawk extends Bird
-     {    
-      void fly()
-        {
-            System.out.println("Hawk glides and swoops with precise control.");
-        }
-       void makeSound()
-         {
-            System.out.println("Hawk makes a sharp, piercing screech.");
-         }
-    }
-     class main
-     {
-        public static void main(String st[]) 
-         {
-            Bird obj = new Eagle();
-            Bird obj1 = new Hawk();
-                    obj.fly();
-                   obj.makeSound();
-                   obj1.fly();
-                  obj1.makeSound();
-        }
-    }
+    class ClaExample {
 
+        public static void main(String st[]) {
+            
+            if (st.length &gt 0) {
+                System.out.println("Command line arguments:");
+    
+               
+                for (int i = 0; i &lt st.length; i++) {
+                    System.out.println("Argument " + (i + 1) + ": " + st[i]);
+                }
+            } else {
+                System.out.println("No command line arguments provided.");
+            }
+        }
+    }
+    
     OUTPUT:
-    Eagle soars high in the sky with powerful wing strokes.
-    Eagle makes a high-pitched, whistling sound.
-
-    Hawk glides and swoops with precise control.
-    Hawk makes a sharp, piercing screech.
-
-
-
-
+    ommand line arguments:
+    Argument 1: 12
+    Argument 1: 234
+    Argument 1: 56
   </pre>
 </body>
 

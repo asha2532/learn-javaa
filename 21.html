@@ -9,51 +9,30 @@
 
 <body>
   <pre>
-    abstract class Vehicle 
-    {
-           abstract void startEngine();
-          abstract void stopEngine();
-    }
-    class Car extends Vehicle
-     {
-        void startEngine()
-          {
-              System.out.println("Car engine started.");
-           }
-        void stopEngine()
-          {
-               System.out.println("Car engine stopped.");
-          }
-    }
-    class Motorcycle extends Vehicle
-     {
-         void startEngine()
-           {
-               System.out.println("Motorcycle engine started.");
-           }
-        void stopEngine()
-         {
-              System.out.println("Motorcycle engine stopped.");
-         }
-    }
-    class main 
-    {
-        public static void main(String st[])
-          {
-            Vehicle obj = new Car();
-            Vehicle obj1= new Motorcycle();
-                         obj.startEngine();
-                         obj.stopEngine();
-                         obj1.startEngine();
-                        obj1.stopEngine();
-        }
-    }
+    class para
+{
+int x=40;
+para(){}
+para(int y)
+{
+ x=y;
+}
+void display()
+{
+System.out.println(x);
+}
+public static void main(String st[])
+{
+para obj=new para(12);
+para obj1=new para();
+obj.display();
+obj1.display();
+}
+}
 
-    OUTPUT:
-    Car engine started.
-    Car engine stopped.
-    Motorcycle engine started.
-    Motorcycle engine stopped.
+OUTPUT:
+12
+40
   </pre>
 </body>
 

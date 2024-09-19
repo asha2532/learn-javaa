@@ -9,23 +9,95 @@
 
 <body>
   <pre>
-    import java.util.Scanner;
-
-    class main8
+    class TrafficLight
     {
-    public static void main(String st[]) throws java.io.IOException
+     
+       String color;
+    
+      int duration;
+   
+   
+      TrafficLight(String color, int duration)
     {
-    java.util.Scanner obj= new java.util.Scanner(System.in);
-    System.out.println("enter the value :");
-     long br=obj.nextLong();
-    System.out.println("entered value is:" + br);
-    }
-    }
-
-    OUTPUT:
-    enter the value :
-    1243657887
-    entered value is:1243657887
+       
+       this.color = color;
+     
+         this.duration = duration;
+   
+       }
+   
+     
+      void changeColor(String newColor) 
+   {
+      
+        this.color = newColor;
+    
+      }
+   
+    
+          boolean isRed()
+    {
+   
+           return color.equalsIgnoreCase("red");
+   
+       }
+   
+     
+       boolean isGreen() 
+      {
+   
+           return color.equalsIgnoreCase("green");
+   
+       }
+   
+       
+       void printStatus() 
+   {
+        
+      System.out.println("Traffic Light: " + color + ", Duration: " + duration + " seconds");
+   
+       }
+   
+       
+     public static void main(String st[])
+    {
+     
+          TrafficLight trafficLight = new TrafficLight("red", 30);
+   
+   
+           trafficLight.printStatus();
+   
+         
+         if (trafficLight.isRed()) 
+         {
+            
+      System.out.println("Stop!");
+   
+           }
+   
+         
+   
+           trafficLight.changeColor("green");
+   
+     
+         trafficLight.printStatus();
+   
+    
+            if (trafficLight.isGreen())
+        {
+    
+              System.out.println("Go!");
+     
+         }
+     
+     }
+   
+   }
+   OUTPUT:
+   Traffic Light: red, Duration:30 seconds
+   Stop!
+   Traffic Light: green, Duration:30 seconds
+   Go!
   </pre>
 </body>
 
