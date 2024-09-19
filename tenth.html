@@ -9,32 +9,40 @@
 
 <body>
   <pre>
-    import java.io.BufferedReader;
-    import java.io.IOException;
-    import java.io.InputStreamReader;
+    class CountNum
+    {
+       int CountDigit(int num)
+        {
+             if(num==0)
+               {
+                  return 1;
+                }
+           int count=0;
+            while(num&gt0)
+              {
+                 num/=10;
+                 count++;
+             }
+           return count;
+        }
+    }
+    class main
+    {
+      public static void main(String st[])
+        {
+           CountNum obj=new CountNum();
+                   
+                 System.out.println( "number of digits:"+obj.CountDigit(0));
+                  System.out.println("number of digits:"+ obj.CountDigit(124567));
     
-    class main10
-    {
-    public static void main(String st[]) throws IOException
-    {
-    BufferedReader obj=new BufferedReader(new InputStreamReader(System.in));
-    System.out.println("enter an integer");
-    String str=obj.readLine();
-    int num=Integer.parseInt(str);
-    
-    int sum=0;
-    while(num!=0)
-    {
-    sum+=num%10;
-    num/=10;
+      }
     }
-     System.out.println("sum of digits:" + sum);
-    }
-    }
-
+               
+      
+           
     OUTPUT:
-    enter an integer:4634
-    sum of digits:17
+    number of digits:1
+    number of digits:6
   </pre>
 </body>
 

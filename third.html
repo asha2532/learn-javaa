@@ -10,18 +10,28 @@
 <body>
   <pre>
     class main3
-    {
-    public static void main(String st[])
-    {
-    int a=12;
-    int b=8;
-    int product=a*b;
-    System.out.println("Product is:" + ""+ product);
-    }
-    }
+{
+public static void main(String st[])
+{
+printMiddle("Manjit");
+}
 
-    OUTPUT:
-    Product is:96
+public static void printMiddle(String str)
+{
+ int middleIndex=str.length()/2;
+if(str.length()%2==0)
+{
+System.out.println("String has even length,middle characters are:"+ str.charAt(middleIndex-1)+" and "+ str.charAt(middleIndex) );
+}else
+{
+System.out.println("Middle character is:"+ str.charAt(middleIndex));
+}
+
+}
+}
+
+OUTPUT:
+String has even length,middle character are:n and j
   </pre>
 </body>
 

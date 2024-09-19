@@ -9,53 +9,35 @@
 
 <body>
   <pre>
-    import java.io.BufferedReader;
-    import java.io.IOException;
-    import java.io.InputStreamReader;
-    
-    class main12
-    {
-    public static void main(String st[]) throws IOException
-    {
-    BufferedReader obj=new BufferedReader(new InputStreamReader(System.in));
-    System.out.println("Enter a string:");
-    String str=obj.readLine();
-    
-    int letterCount=0;
-    int spaceCount=0;
-    int numberCount=0;
-    int otherCount=0;
-    
-    for(char c : str.toCharArray())
-    {
-    if(Character.isLetter(c))
-    {
-    letterCount++;
-    }else if(Character.isSpaceChar(c))
-    {
-    spaceCount++;
-    }else if(Character.isDigit(c))
-    {
-    numberCount++;
-    }else
-    {
-    otherCount++;
-    }
-    }
-    System.out.println("Letters:" + letterCount);
-    System.out.println("Spaces:" + spaceCount);
-    System.out.println("Numbers:" + numberCount);
-    System.out.println("Other character:" + otherCount);
-    }
-    }
+    class Integer
+{
+    boolean  AcceptInt(int num,int num1,int num2)
+     {
+          if(num1&gtnum && num1&ltnum2)
+           {
+              System.out.println("True");
+               return true;
+            }
+          else 
+          {
+             System.out.println("False");
+               return false;
+            }
+      }
+}
+class main
+{
+  public static void main(String st[])
+   {
+     Integer obj=new Integer();
+            obj.AcceptInt(23,45,90);
+  }
+}
+  
+OUTPUT:
+True
+       
 
-    OUTPUT:
-    Enter a string:
-    stop being nice to everyone...ri8
-     Letters:25
-     Spaces:5
-     Numbers:1
-     Other character:2
   </pre>
 </body>
 

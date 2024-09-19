@@ -9,22 +9,35 @@
 
 <body>
   <pre>
-    import java.util.Scanner;
-class main7
-{
-public static void main(String st[]) throws java.util.InputMismatchException
-{
-Scanner obj=new Scanner(System.in);
-System.out.println("enter a decimal number:");
-int decimal=obj.nextInt();
-
-String change=Integer.toBinaryString(decimal);
-System.out.println(" binary form:" + change);
-}
-}
-OUTPUT:
-enter a decimal: 13
-binary form: 1101
+    class main7
+    {
+    public static void main(String st[])
+    {
+    checkPasswordValid("p@sswor");
+    }
+    
+    public static void checkPasswordValid(String str )
+    {
+     
+    if(str.length()&gt1)
+    {
+    if(str.length()&gt8)
+    {
+    System.out.println("password is valid: " + str.length());
+    }
+    else
+    {
+    System.out.println(" Sorry! please try again..." );
+    }}
+    else
+    {
+    System.out.println();
+    }
+    
+    }
+    }
+    OUTPUT:
+    Sorry! please try again...
   </pre>
 </body>
 

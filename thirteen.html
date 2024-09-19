@@ -9,25 +9,30 @@
 
 <body>
   <pre>
-    import java.io.IOException;
-    import java.io.InputStreamReader;
-    
     class main13
-    {
-    public static void main(String st[]) throws IOException
-    {
-     InputStreamReader obj= new InputStreamReader(System.in);
-    System.out.println("Enter a character:");
-    int str=obj.read();
-    
-    System.out.println("ASCII value is:" + str);
-    }
-    }
+{
+public static void main(String st[])
+{
+System.out.println(areVowel("aeiou"));
+}
 
-    OUTPUT:
-    Enter a character:
-    R
-    ASCII value is:82
+public static boolean areVowel(String t)
+{
+t=t.toLowerCase();
+for(int i=0;i&ltt.length();i++)
+{
+char c=t.charAt(i);
+if(!(c=='a' || c=='e' || c=='i' || c=='o' || c=='u'))
+{
+return false;
+}
+}
+return true;
+}
+}
+
+OUTPUT:
+true
   </pre>
 </body>
 
