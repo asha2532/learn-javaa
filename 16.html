@@ -9,46 +9,19 @@
 
 <body>
   <pre>
-    import java.util.Arrays;
+    class A
+    {
+      public static void main(String args[])
+      {
+        long num=123l;
+        int intnum1=(int)num;
+        System.out.println(intnum1);
+      }
+    }
 
-    class main16
-    {
-    public static void main(String st[])
-    {
-    int arr[]={5,2,8,1,9,3,7,6,4};
-    System.out.println("original array:");
-    printArray(arr);
-    int thirdLargest=findThirdLargest(arr);
-    
-    System.out.println("\nthird largest number in array:"+thirdLargest);
-    
-    }
-    
-    public static int findThirdLargest(int arr[])
-    {
-    
-    Arrays.sort(arr);
-    if(arr.length&lt3)
-    {
-    System.out.println("Array does not have 3 elements");
-    return -1;
-    }
-    return arr[arr.length-3];
-    }
-    
-    public static void printArray(int arr[])
-    {
-    for(int i=0;i&ltarr.length;i++)
-    {
-    System.out.print(arr[i]+ " ");
-    }
-    }
-    }
     OUTPUT:
-    original array:
-    5,2,8,1,9,3,7,6,4
-    third largest number in array:7
+    123
   </pre>
 </body>
-   
+
 </html>

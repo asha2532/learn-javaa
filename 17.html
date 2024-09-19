@@ -9,46 +9,19 @@
 
 <body>
   <pre>
-    import java.util.Arrays;
+    class A
+    {
+      public static void main(String args[])
+      {
+        int num=123;
+        double doublenum1=(double)num;
+        System.out.println(doublenum1);
+      }
+    }
 
-    class main17
-    {
-    public static void main(String st[])
-    {
-    int arr[]={5,2,8,1,9,3,7,6,4};
-    System.out.println("original array:");
-    printArray(arr);
-    int secondLargest=findSecondLargest(arr);
-    
-    System.out.println("\nsecond largest number in array:"+secondLargest);
-    
-    }
-    
-    public static int findSecondLargest(int arr[])
-    {
-    
-    Arrays.sort(arr);
-    if(arr.length&lt2)
-    {
-    System.out.println("Array does not have 2 elements");
-    return -1;
-    }
-    return arr[arr.length-2];
-    }
-    
-    public static void printArray(int arr[])
-    {
-    for(int i=0;i&ltarr.length;i++)
-    {
-    System.out.print(arr[i]+ " ");
-    }
-    }
-    }
     OUTPUT:
-    original array:
-    5,2,8,1,9,3,7,6,4
-    second largest number in array:8
+    123.0
   </pre>
 </body>
-   
+
 </html>

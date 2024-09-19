@@ -9,47 +9,22 @@
 
 <body>
   <pre>
-    import java.util.Arrays;
+      
+class A
+{
+	public static void main(String args[])
+	{
+		char c='A';
+		int num1=c;
+		System.out.println(c);
+	}
+	
 
-    class main19
-    {
-    public static void main(String st[])
-    {
-    int arr[]={5,2,8,1,9,3,7,6,4};
-    System.out.println("original array:");
-    printArray(arr);
-    int secondSmallest=findSecondSmallest(arr);
-    
-    System.out.println("\nsecond smallest number in array:"+secondSmallest);
-    
-    }
-    
-    public static int findSecondSmallest(int arr[])
-    {
-    
-    Arrays.sort(arr);
-    if(arr.length&lt2)
-    {
-    System.out.println("Array does not have 2 elements");
-    return -1;
-    }
-    return arr[1];
-    }
-    
-    public static void printArray(int arr[])
-    {
-    for(int i=0;i&ltarr.length;i++)
-    {
-    System.out.print(arr[i]+ " ");
-    }
-    }
-    }
+}
 
-    OUTPUT:
-    original array:
-    5,2,8,1,9,3,7,6,4
-    second smallest number in array:2
+OUTPUT:
+A
   </pre>
 </body>
-   
+
 </html>

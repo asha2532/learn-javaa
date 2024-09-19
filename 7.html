@@ -9,33 +9,18 @@
 
 <body>
   <pre>
-    class main7
+    class A
     {
-     public static void main(String st[])
-    {
-     int arr[]=new int[7];
-     arr[0]=12;
-    arr[1]=13;
-    arr[2]=15;
-    arr[3]=16;
-    arr[4]=18;
-    arr[5]=11;
-    arr[6]=19;
-    
-    System.out.println("elements at even position:");
-    for(int i=0;i&ltarr.length;i++)
-    {
-     if(i%2==0)
-    {
-     System.out.print(arr[i] + " ");
-    } 
-    }
-    }
+      public static void main(String args[])
+      {
+        String str="12.345";
+        double num=Double.parseDouble(str);
+        System.out.println("Converted double:"+num);
+      }
     }
 
     OUTPUT:
-    elements at even position:
-     12 15 18 19
+    Converted double:12.345
   </pre>
 </body>
 
