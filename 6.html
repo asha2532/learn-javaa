@@ -9,20 +9,30 @@
 
 <body>
   <pre>
-    class A
+    class Animal
     {
-      public static void main(String args[])
-      {
-        float num=123.45f;
-        String str=Float.toString(num);
-        System.out.println(str);
-      }
-    
-    
+         void move()
+          {
+            System.out.println("Snake is moving");
+           }
     }
-
+    class Cheetah extends Animal
+    {
+        void move()
+         {
+            System.out.println("Cheetah is running");
+          }
+    }
+    class main
+    {
+      public static void main(String st[])
+        {
+           Cheetah obj=new Cheetah();
+                  obj.move();
+          }
+    }
     OUTPUT:
-    123.45
+    Cheetah is running
   </pre>
 </body>
 

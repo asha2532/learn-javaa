@@ -9,20 +9,67 @@
 
 <body>
   <pre>
-     
-class A
-{
-	public static void main(String args[])
-	{
-		double num=123.45;
-		String str=Double.toString(num);
-		System.out.println(str);
-	}
-
-}
-
+    class Shape
+    {   
+              private double length; 
+              private double width;
+    void setLength(double l)                   
+         {
+            length=l;
+         }
+     void setWidth(double w)
+       {
+          width=w;
+       }
+    
+    double getPerimeter()
+         {       
+                     double perimeter=length+width;
+                System.out.println("perimeter of rectangle"+perimeter);
+            return perimeter;
+         }
+    double getArea()
+        {
+                   double area=length*width;
+               System.out.println("Area of rectangle"+area);
+            return area;
+        }
+    }
+    class small extends Shape
+    {
+       double getPerimeter()
+          {
+                  double pi=3.14d;
+                  double d=14.6d;
+                  double perimeter=pi*d;
+               System.out.println("perimeter of circle:"+perimeter);
+            return perimeter;
+         }
+      double getArea()
+         {
+                  double pi=3.14d;
+                  double r=12.8d;
+                 double area1;
+               area1=pi*r*r;
+            System.out.println("Area of circle:"+ area1);
+         return area1;
+         }
+    }
+    class main
+    {
+      public static void main(String st[])
+      {
+         small obj=new small();
+                obj.getPerimeter();
+               obj.getArea();
+    
+       }
+    }
+          
+    
 OUTPUT:
-123.45
+perimeter of circle:45.884
+Area of circle:514.45760000001
   </pre>
 </body>
 

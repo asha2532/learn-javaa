@@ -9,19 +9,31 @@
 
 <body>
   <pre>
-    class A
+    class Playground
     {
-      public static void main(String args[])
-      {
-        char ch='A';
-        String str=Character.toString(ch);
-        System.out.println(str);
-      }
-    
+       void play()
+        {
+            System.out.println("children are playing");
+        }
     }
-
-    OUTPUT:
-    A
+    class Children extends Playground
+    {
+     void play()
+    {
+       super.play();
+    }
+    }
+    class main
+    {
+     public static void main(String st[])
+       {
+           Children obj=new Children();
+                 obj.play();
+    }
+    }
+    
+OUTPUT:
+children are playing
   </pre>
 </body>
 

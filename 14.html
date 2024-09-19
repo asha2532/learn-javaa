@@ -9,19 +9,39 @@
 
 <body>
   <pre>
-    class A
+    abstract class A
     {
-      public static void main(String args[])
-      {
-        Object obj="Abhi";
-        String str=obj.toString();
-        System.out.println(str);
-      }
-    
+        abstract void disp();
+       void display()
+        {
+            System.out.println("diplaying content");
+        }
     }
+    class B extends A
+    {
+       void disp()
+        {
+            System.out.println(" content");
+         }
+     void display()
+        {
+            System.out.println("changing content");
+        }
+    }
+    class main
+    {
+     public static void main(String st[])
+       {
+           A obj=new B();
+              obj.disp();
+               obj.display();
+         }
+    }
+    
 
     OUTPUT:
-    Abhi
+    content
+    changing content
   </pre>
 </body>
 

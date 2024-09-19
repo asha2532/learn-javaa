@@ -9,19 +9,41 @@
 
 <body>
   <pre>
-    class A
+    abstract class Animal
+{
+  abstract void sound();
+}
+class Lion extends Animal
+{
+   void sound()
     {
-      public static void main(String args[])
-      {
-        int num=123;
-        long longnum1 = Long.valueOf(num);
-        System.out.println(longnum1);
-        
-      }
-    }
+       System.out.println("Lion roars");
+   }
+}
+class Tiger extends Animal
+{
+   void sound()
+    {
+       System.out.println("Tiger growls");
+   }
+}
+class main
+{
+  public static void main(String st[])
+    {
+       Animal obj=new Lion();
+        Animal obj1=new Tiger();
+               obj.sound();
+              obj1.sound();
+   }
+}
 
-    OUTPUT:
-    123
+OUTPUT:
+Lion roars
+Tiger growls
+
+
+
   </pre>
 </body>
 

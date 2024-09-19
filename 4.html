@@ -9,18 +9,82 @@
 
 <body>
   <pre>
-    class A
-    {
-      public static void main(String args[])
-      {
-        long num=1234567890;
-        String str=Long.toString(num);
-        System.out.println(str);
-      }
-    }
+    package employee;
 
-    OUTPUT:
-    1234567890
+
+    class Employee
+    
+     {
+    private double salary;
+    
+    public Employee(double salary)
+    
+      {
+      this.salary=salary;
+      }
+    
+      void work()
+    
+      {
+      System.out.println("Employee is working");
+      }
+    
+      double getSalary()
+    
+      {
+      return salary;
+      }
+      }
+    
+    
+    class HRManager extends Employee
+    
+      {
+    
+      public HRManager(double salary)
+    
+      {
+    
+      super(salary);
+      }
+    
+      void work()
+    
+      {
+      System.out.println("HRManager is managing employee");
+      }
+    
+      void addEmployee()
+    
+      {
+      System.out.println("HR Manager adding Employee");
+      }
+    
+      }
+    
+    class Main
+    
+      {
+      public static void main(String st[])
+    
+      {
+      Employee emp=new Employee(5000);
+    
+      emp.work();
+    
+      System.out.println("Salary : "+emp.getSalary());
+    
+      HRManager hrm=new HRManager(10000);
+    
+      hrm.work();
+    
+      System.out.println("Salary : "+hrm.getSalary());
+    
+      hrm.addEmployee();
+    
+      }
+      }
+    
   </pre>
 </body>
 

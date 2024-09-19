@@ -9,18 +9,31 @@
 
 <body>
   <pre>
-    class A
+    class Animal
     {
-        public static void main(String args[])
-        {
-            String str="123";
-            int num=Integer.parseInt(str);
-            System.out.println("Converted int:"+num);
-        }
+      void makeSound()
+      {
+      System.out.println("Lion is roaring");
+    }
+    }
+     class Cat extends Animal
+    {
+         void makeSound()
+           {
+              System.out.println("cats don't bark");
+            }
+     }
+    class main
+    {
+     public static void main(String st[])
+      {
+              Cat obj1=new Cat();                
+           obj1.makeSound();
+      }
     }
 
     OUTPUT:
-    Converted int:123
+    cats don't bark
   </pre>
 </body>
 

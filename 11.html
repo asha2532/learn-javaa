@@ -9,19 +9,32 @@
 
 <body>
   <pre>
-    class A
-{
-	public static void main(String args[])
-	{
-		String str="nimbu";
-		char ch[]=str.toCharArray();
-		System.out.println(ch);
+    class Keyword
+    {
+      int x;
+    }
+    class Usage  extends Keyword
+    {
+               int x;
+      void display()
+       {
+                 x=120;
+              super.x=130;               
+          System.out.println("subclass variable :" +x+ "\n superclass variable: " + super.x);
+       } 
+    }
+    class main
+    {
+     public static void main(String a[])
+       {
+           Usage obj=new Usage();
+                 obj.display();
+        }
+    }
 
-	}
-}
-
-OUTPUT:
-nimbu
+    OUTPUT:
+    subclass variable :120
+    superclass variable: 130
   </pre>
 </body>
 

@@ -9,19 +9,53 @@
 
 <body>
   <pre>
-    class A
+    package animal2;
+
+    class Animal
+    
     {
-      public static void main(String args[])
+    
+      void move()
+    
       {
-        String str="123.45";
-        float num=Float.parseFloat(str);
-        System.out.println("Converted float:"+num);	
+      System.out.println("Move");
+    
       }
     
+      }
+    
+    class Cheetah extends Animal
+    
+      {
+      void move()
+    
+      {
+      System.out.println("Cheetah Run");
+    
+      }
+      
     }
-
-    OUTPUT:
-    Converted float:123.45
+    
+    
+    class Main
+    
+      {
+    
+      public static void main(String st[])
+    
+      {
+      Animal a=new Animal();
+    
+      a.move();
+    
+      Cheetah c = new Cheetah();
+    
+      c.move();
+    
+      }
+    
+      }
+    
   </pre>
 </body>
 

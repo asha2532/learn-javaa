@@ -9,18 +9,114 @@
 
 <body>
   <pre>
-    class A
-    {
-      public static void main(String args[])
-      {
-        int num=123;
-        double doublenum1=(double)num;
-        System.out.println(doublenum1);
-      }
+    package bankaccount;
+
+class BankAccount 
+{
+   
+ private double balance;
+
+ 
+   public BankAccount(double bal) 
+{
+
+        balance = bal;
+  
+  }
+
+ 
+   public void deposit(double amount)
+ {
+  
+      balance += amount;
+ 
+       System.out.println("Deposited: " + amount);
+
     }
 
-    OUTPUT:
-    123.0
+ 
+   public void withdraw(double amount)
+ {
+   
+     balance -= amount;
+ 
+       System.out.println("Withdrawn: " + amount);
+
+    }
+
+  
+  public double getBalance()
+ {
+     
+   return balance;
+ 
+   }
+
+}
+
+
+
+
+class SavingsAccount extends BankAccount
+ {
+ 
+   public SavingsAccount(double balance)
+ {
+   
+     super(balance);
+
+    }
+
+   
+ @Override
+    public void withdraw(double amount)
+ {
+   
+     if (getBalance() - amount < 100)
+ {
+    
+        System.out.println("Withdrawal not allowed. Balance will fall below $100.");
+ 
+       } else
+ {
+    
+        super.withdraw(amount);
+ 
+       }
+  
+  }
+
+}
+
+ 
+
+class Main
+ {
+    public static void main(String[] args)
+ {
+    
+    BankAccount account = new BankAccount(1000);
+ 
+       account.deposit(500);
+  
+      account.withdraw(200);
+ 
+       System.out.println("Balance: " + account.getBalance());
+
+ 
+       SavingsAccount savingsAccount = new SavingsAccount(1000);
+ 
+       savingsAccount.deposit(500);
+  
+      savingsAccount.withdraw(200);
+  
+      savingsAccount.withdraw(1300); 
+ 
+       System.out.println("Balance: " + savingsAccount.getBalance
+}
+
+}
+
   </pre>
 </body>
 
